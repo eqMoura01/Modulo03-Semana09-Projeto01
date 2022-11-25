@@ -1,0 +1,120 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+
+    padding-top: 50px;
+    padding-left: 200px;
+
+    width: 100vmin;
+    height: 100vmin;
+
+    background: linear-gradient(113deg, blue 50%, white 50%);
+    color: white;
+}
+
+/* HEADER STYLE */
+
+.header {
+    display: flex;
+    flex-direction: column;
+}
+
+.inptContainer {
+    display: flex;
+    align-items: center;
+
+    gap: 25px;
+    width: 50%;
+    height: 50px;
+
+}
+
+#produtoInpt {
+    height: 70%;
+    border-radius: 5px;
+}
+
+#inptBtn {
+    height: 70%;
+    width: 100px;
+    font-size: 20px;
+
+    border: none;
+    border-radius: 5px;
+}
+
+/* CARD BOX STYLE*/
+main {
+    display: flex;
+
+    justify-content: space-between;
+    width: 80vmax;
+}
+
+.listaContainer {
+    display: flex;
+    flex-direction: column;
+
+    background: rgb(75, 75, 75);
+
+    padding: 30px;
+    width: 70%;
+    height: 300px;
+    min-height: fit-content;
+    overflow: scroll;
+
+    border-radius: 15px;
+}
+
+label {
+    font-size: 28px;
+}
+
+/* LISTA COMPRAS STYLE */
+#listaCompras {
+    margin-bottom: 25px;
+    list-style: none;
+}
+
+li {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    font-size: 25px;
+
+    height: 40px;
+}
+
+li>img {
+    height: 20px;
+}
+
+#prodCheckbox {
+    height: 25px;
+    width: 25px;
+}
+
+.totalContainer {
+
+    color: black;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 30%;
+
+    padding-left: 15px;
+}
+
+.totalContainer>span {
+    font-size: 30px;
+}
