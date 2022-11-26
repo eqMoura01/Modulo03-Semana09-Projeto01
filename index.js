@@ -12,6 +12,7 @@ adicionarButton.addEventListener('click', () => {
         jaTemValor: false
     }
 
+    produtoInput.value = '';
     listaProdutos.push(produto);
     adicionarProdutoToListaCompras(produto.produtoNome);
 
