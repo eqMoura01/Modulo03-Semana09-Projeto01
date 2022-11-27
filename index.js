@@ -12,9 +12,18 @@ adicionarButton.addEventListener('click', () => {
         jaTemValor: false
     }
 
-    produtoInput.value = '';
+    iziToast.info({
+        title: 'Sucesso',
+        message: 'Produto inserido na lista de compras!',
+    });
+
     listaProdutos.push(produto);
-    adicionarProdutoToListaCompras(produto.produtoNome);
+
+    if (produto.produtoNome.length >= 8 && produto.produtoNome.length <= 64) {
+        adicionarProdutoToListaCompras(produto.produtoNome);
+    }
+
+    produtoInput.value = '';
 
 })
 
@@ -50,9 +59,9 @@ function adicionarProdutoToListaCompras(nome, jaTemValor) {
     checkbox.type = 'checkbox';
     checkbox.style.height = '25px';
     checkbox.style.width = '25px';
-    
 
-    if(jaTemValor == true){
+
+    if (jaTemValor == true) {
         checkbox.disabled = true;
         checkbox.checked = true;
     }
@@ -89,6 +98,10 @@ function adicionarProdutoToListaCompras(nome, jaTemValor) {
     removerButton.src = 'https://upload.wikimedia.org/wikipedia/en/thumb/6/61/Cross_icon_%28white%29.svg/1024px-Cross_icon_%28white%29.svg.png';
     removerButton.addEventListener('click', () => {
         listaCompras.removeChild(objetoLista);
+        iziToast.info({
+            title: 'Aviso',
+            message: 'Produto removido com sucesso!',
+        });
         removerItemDaListaCompras(produto);
         salvarListaProdutoLocalStorage(listaProdutos)
     })

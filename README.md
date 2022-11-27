@@ -20,3 +20,9 @@ Preenchimento: Obrigatório
 Tipo de campo: Input number
 Valor mínimo: R$0,00
 A lista deve ser salva no localStorage do navegador (incluindo os produtos que já foram realizados), e deve ser carregada sempre que a página for reaberta.
+
+## Dependencias
+
+Izitoast - versão 1.4.0
+
+Para usar as dependencias 'npm install'
