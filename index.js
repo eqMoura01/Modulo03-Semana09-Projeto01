@@ -12,15 +12,19 @@ adicionarButton.addEventListener('click', () => {
         jaTemValor: false
     }
 
-    iziToast.info({
-        title: 'Sucesso',
-        message: 'Produto inserido na lista de compras!',
-    });
-
-    listaProdutos.push(produto);
 
     if (produto.produtoNome.length >= 8 && produto.produtoNome.length <= 64) {
+        listaProdutos.push(produto);
+        iziToast.info({
+            title: 'Sucesso',
+            message: 'Produto inserido na lista de compras!',
+        });
         adicionarProdutoToListaCompras(produto.produtoNome);
+    } else {
+        iziToast.error({
+            title: 'Erro!',
+            message: 'Quantidade errada de caracteres!',
+        });
     }
 
     produtoInput.value = '';
